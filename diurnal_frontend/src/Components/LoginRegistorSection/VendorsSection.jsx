@@ -1,6 +1,30 @@
+import { useState } from 'react'
 import { Badge } from 'flowbite-react'
+import LoginSection from '../VendorLoginSection/LoginSection'
+import RegisterSection from '../VendorRegisterSection/RegisterSection'
 
 function VendorsSection() {
+
+    const [showVendorLogin, setShowVendorLogin] = useState(false)
+
+    function onCloseLogin() {
+        setShowVendorLogin(false)
+    }
+
+    function onClickLogin() {
+        setShowVendorLogin(true)
+    }
+
+    const [showVendorRegister, setShowVendorRegister] = useState(false)
+
+    function onCloseRegister() {
+        setShowVendorRegister(false)
+    }
+
+    function onClickRegister() {
+        setShowVendorRegister(true)
+    }
+
     return (
         <>
             <div className="m-16">
@@ -138,6 +162,7 @@ function VendorsSection() {
                         </li>
                     </ul>
                     <button
+                        onClick={onClickLogin}
                         type="button"
                         className="inline-flex w-full justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900"
                     >
@@ -146,11 +171,14 @@ function VendorsSection() {
                     <div>
                         Don't Have An Account?
                         <span>
-                            <a href="#" className="text-xl font-bold tracking-tight leading-none text-blue-600 md:text-xl dark:text-white"> Register </a>
+                            <button onClick={onClickRegister} className="text-xl font-bold tracking-tight leading-none text-blue-600 md:text-xl dark:text-white"> Register </button>
                         </span>
                     </div>
                 </>
             </div>
+
+            <LoginSection show={showVendorLogin} onClick={onClickLogin} onClose={onCloseLogin} />
+            <RegisterSection show={showVendorRegister} onClick={onClickRegister} onClose={onCloseRegister} />
         </>
     )
 }

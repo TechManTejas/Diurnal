@@ -1,4 +1,18 @@
+import { useState } from 'react'
+import LoginRegisterSection from '../BuyerLoginRegisterSection/LoginRegisterSection'
+
 function BuyersSection() {
+
+    const [showBuyerLogin, setShowBuyerLogin] = useState(false)
+
+    function onCloseLoginRegister() {
+        setShowBuyerLogin(false)
+    }
+
+    function onClickLoginRegister() {
+        setShowBuyerLogin(true)
+    }
+
     return(
         <>
             <div className="m-16">
@@ -131,19 +145,16 @@ function BuyersSection() {
                         </li>
                     </ul>
                     <button
+                        onClick={onClickLoginRegister}
                         type="button"
                         className="inline-flex w-full justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900"
                     >
                         Login
                     </button>
-                    <div>
-                        Don't Have An Account?
-                        <span>
-                            <a href="#" className="text-xl font-bold tracking-tight leading-none text-blue-600 md:text-xl dark:text-white"> Register </a>
-                        </span>
-                    </div>
                 </>
             </div>
+
+            <LoginRegisterSection show={showBuyerLogin} onClick={onClickLoginRegister} onClose={onCloseLoginRegister}/> 
         </>
     )
 }
