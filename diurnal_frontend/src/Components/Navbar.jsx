@@ -49,27 +49,49 @@ function MyNavbar() {
                     <Navbar.Toggle />
                 </div>
                 <Navbar.Collapse>
-                    <Navbar.Link
-                        href="/navbars"
-                        active={true}
-                    >
-                        Home
-                    </Navbar.Link>
-                    <Navbar.Link href="/navbars">
-                        About
-                    </Navbar.Link>
-                    <Navbar.Link href="/navbars">
-                        Services
-                    </Navbar.Link>
-                    <Navbar.Link href="/navbars">
-                        Pricing
-                    </Navbar.Link>
-                    <Navbar.Link href="/navbars">
-                        Contact
-                    </Navbar.Link>
+                    <div>
+                        <Button
+                            outline={true}
+                            gradientDuoTone="cyanToBlue"
+                        >
+                            Home
+                        </Button>
+                    </div>
+                    <div>
+                        <Button
+                            outline={true}
+                            gradientDuoTone="cyanToBlue"
+                        >
+                            About
+                        </Button>
+                    </div>
+                    <div>
+                        <Button
+                            outline={true}
+                            gradientDuoTone="cyanToBlue"
+                        >
+                            Services
+                        </Button>
+                    </div>
+                    <div>
+                        <Button
+                            outline={true}
+                            gradientDuoTone="cyanToBlue"
+                        >
+                            Pricing
+                        </Button>
+                    </div>
+                    <div>
+                        <Button
+                            outline={true}
+                            gradientDuoTone="cyanToBlue"
+                        >
+                            Contact
+                        </Button>
+                    </div>
                     <div>
                         <Button gradientDuoTone="cyanToBlue">
-                            Login / Sign Up
+                            Login / Register
                         </Button>
                     </div>
                 </Navbar.Collapse>
