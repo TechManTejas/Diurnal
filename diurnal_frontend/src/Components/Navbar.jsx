@@ -1,4 +1,4 @@
-import {Avatar, Dropdown, Navbar} from 'flowbite-react'
+import {Avatar,Button, Dropdown, Navbar} from 'flowbite-react'
 
 function MyNavbar() {
     return (
@@ -17,6 +17,7 @@ function MyNavbar() {
                         Flowbite
                     </span>
                 </Navbar.Brand>
+
                 <div className="flex md:order-2">
                     <Dropdown
                         arrowIcon={false}
@@ -66,6 +67,11 @@ function MyNavbar() {
                     <Navbar.Link href="/navbars">
                         Contact
                     </Navbar.Link>
+                    <div>
+                        <Button gradientDuoTone="cyanToBlue">
+                            Login / Sign Up
+                        </Button>
+                    </div>
                 </Navbar.Collapse>
             </Navbar>
         </>

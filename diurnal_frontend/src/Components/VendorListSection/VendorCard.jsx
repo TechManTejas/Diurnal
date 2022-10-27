@@ -5,8 +5,8 @@ function VendorCard() {
         <div className="m-2">
             <Card>
                 <div className="flex">
-                    <div className="m-2">
-                        <img className="object-cover h-48 w-96" src="https://flowbite.com/docs/images/carousel/carousel-1.svg"/>
+                    <div className="m-3">
+                        <img className="rounded-md object-cover h-48 w-96" src="https://flowbite.com/docs/images/carousel/carousel-1.svg"/>
                     </div>
                     <div>
                         <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">

@@ -1,4 +1,5 @@
 import VendorGrid from "./VendorGrid";
+import {Pagination} from 'flowbite-react'
 
 function VendorSection() {
     return (
@@ -10,6 +11,15 @@ function VendorSection() {
             </div>
 
             <VendorGrid/>
+
+            <div className="flex justify-center bg-sky-100 pb-2 rounded-lg">
+                <Pagination
+                    currentPage={1}
+                    totalPages={100}
+                // onPageChange={onPageChange}
+                />
+            </div>
+            
         </>
     );
 }

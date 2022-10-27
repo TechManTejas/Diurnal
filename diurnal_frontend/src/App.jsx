@@ -1,13 +1,14 @@
 import MyNavbar from './Components/Navbar'
 import Home from './Pages/Home'
 import Vendors from './Pages/Vendors'
+import VendorDetails from './Pages/VendorDetails'
 import MyFooter from './Components/Footer';
 
 function App() {
   return (
     <>
       <MyNavbar />
-      <Vendors />
+      <VendorDetails />
       <MyFooter />
     </>
   );

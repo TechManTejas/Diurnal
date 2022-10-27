@@ -5,7 +5,7 @@ function VendorGrid() {
         <>
             <div className="m-1 grid grid-cols-2">
                 {
-                    [...Array(6)].map((i) => (
+                    [...Array(10)].map((i) => (
                         <VendorCard key={i}/>
                     ))
                 }
