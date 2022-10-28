@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router-dom"
 import MyNavbar from './Components/Navbar'
 import Home from './Pages/Home'
 import Vendors from './Pages/Vendors'
@@ -9,7 +10,12 @@ function App() {
   return (
     <>
       <MyNavbar />
-      <VendorDetails />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/vendors" element={<Vendors />} />
+        <Route exact path="/vendordetails" element={<VendorDetails />} />
+        <Route exact path="/auth" element={<LoginRegistor />} />
+      </Routes>
       <MyFooter />
     </>
   );

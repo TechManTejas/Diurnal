@@ -1,4 +1,4 @@
-import {Button, Checkbox, Label, Modal, TextInput} from 'flowbite-react'
+import {Button, Label, Modal, TextInput} from 'flowbite-react'
 
 function LoginRegisterSection({show, onClick, onClose}) {
     return (

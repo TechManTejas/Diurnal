@@ -1,4 +1,4 @@
-import { Button, Checkbox, Label, Modal, TextInput } from 'flowbite-react'
+import { Button, Checkbox, FileInput, Label, Modal, TextInput } from 'flowbite-react'
 
 function RegisterSection({ show, onClick, onClose }) {
     return(
@@ -15,6 +15,19 @@ function RegisterSection({ show, onClick, onClose }) {
                         <div>
                             <div className="mb-2 block">
                                 <Label
+                                    htmlFor="small"
+                                    value="Name"
+                                />
+                            </div>
+                            <TextInput
+                                id="small"
+                                type="text"
+                            />
+                        </div>
+
+                        <div>
+                            <div className="mb-2 block">
+                                <Label
                                     htmlFor="email2"
                                     value="Your email"
                                 />
@@ -27,6 +40,59 @@ function RegisterSection({ show, onClick, onClose }) {
                                 shadow={true}
                             />
                         </div>
+
+                        <div>
+                            <div className="mb-2 block">
+                                <Label
+                                    htmlFor="small"
+                                    value="Contact Number"
+                                />
+                            </div>
+                            <TextInput
+                                id="small"
+                                type="tel"
+                            />
+                        </div>
+
+                        <div>
+                            <div className="mb-2 block">
+                                <Label
+                                    htmlFor="small"
+                                    value="Adhaar Number"
+                                />
+                            </div>
+                            <TextInput
+                                id="small"
+                                type="tel"
+                            />
+                        </div>
+
+                        <div id="fileUpload">
+                            <div className="mb-2 block">
+                                <Label
+                                    htmlFor="file"
+                                    value="ID Proof"
+                                />
+                            </div>
+                            <FileInput
+                                id="file"
+                                helperText="A profile picture is useful to confirm your are logged into your account"
+                            />
+                        </div>
+                        
+                        <div id="fileUpload">
+                            <div className="mb-2 block">
+                                <Label
+                                    htmlFor="file"
+                                    value="Upload Your Picture"
+                                />
+                            </div>
+                            <FileInput
+                                id="file"
+                                helperText="A profile picture is useful to confirm your are logged into your account"
+                            />
+                        </div>
+
                         <div>
                             <div className="mb-2 block">
                                 <Label
@@ -60,7 +126,7 @@ function RegisterSection({ show, onClick, onClose }) {
                             <Label htmlFor="agree">
                                 I agree with the{' '}
                                 <a
-                                    href="/forms"
+                                    href="/termsandconditions"
                                     className="text-blue-600 hover:underline dark:text-blue-500"
                                 >
                                     terms and conditions

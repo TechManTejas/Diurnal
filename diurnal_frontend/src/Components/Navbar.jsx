@@ -1,4 +1,5 @@
 import {Avatar,Button, Dropdown, Navbar} from 'flowbite-react'
+import { NavLink } from "react-router-dom"
 
 function MyNavbar() {
     return (
@@ -54,7 +55,7 @@ function MyNavbar() {
                             outline={true}
                             gradientDuoTone="cyanToBlue"
                         >
-                            Home
+                            <NavLink to="/">Home</NavLink>
                         </Button>
                     </div>
                     <div>
@@ -91,7 +92,7 @@ function MyNavbar() {
                     </div>
                     <div>
                         <Button gradientDuoTone="cyanToBlue">
-                            Login / Register
+                            <NavLink to="/auth">Login / Register</NavLink>
                         </Button>
                     </div>
                 </Navbar.Collapse>
