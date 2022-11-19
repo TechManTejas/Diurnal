@@ -34,7 +34,7 @@ function MyNavbar() {
                             </span>
                         </Dropdown.Header>
                         <Dropdown.Item>
-                            Dashboard
+                            <NavLink to="/dashboard">Dashboard</NavLink>
                         </Dropdown.Item>
                         <Dropdown.Item>
                             Settings
